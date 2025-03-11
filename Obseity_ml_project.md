@@ -356,7 +356,7 @@ fit_ridge_round <- glmnet(k_tr_std_round, s_tr_round, alpha = 0)
 plot_glmnet(fit_ridge_round)
 ```
 
-![](Plots And Images/unnamed-chunk-10-1.png)<!-- -->
+![](Plots/unnamed-chunk-10-1.png)<!-- -->
 In this chunk a Ridge Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
@@ -530,7 +530,7 @@ fit_ridge.sub <- glmnet(e_tr_std_sub, f_tr_sub, alpha = 0)
 plot_glmnet(fit_ridge.sub)
 ```
 
-![](Plots And Images/unnamed-chunk-15-1.png)<!-- -->
+![](Plots/unnamed-chunk-15-1.png)<!-- -->
 In this chunk a Ridge Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
@@ -605,7 +605,7 @@ fit_lasso.sub <- glmnet(e_tr_std_sub, f_tr_sub)
 plot_glmnet(fit_lasso.sub)
 ```
 
-![](Plots And Images/unnamed-chunk-17-1.png)<!-- -->
+![](Plots/unnamed-chunk-17-1.png)<!-- -->
 In this chunk a Lasso Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
@@ -720,7 +720,7 @@ fit_ridge.rem <- glmnet(x_tr_std_rem, y_tr_rem, alpha = 0)
 plot_glmnet(fit_ridge.rem)
 ```
 
-![](Plots And Images/unnamed-chunk-20-1.png)<!-- -->
+![](Plots/unnamed-chunk-20-1.png)<!-- -->
 In this chunk a Ridge Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
@@ -795,7 +795,7 @@ fit_lasso.rem <- glmnet(x_tr_std_rem, y_tr_rem)
 plot_glmnet(fit_lasso.rem)
 ```
 
-![](Plots And Images/unnamed-chunk-22-1.png)<!-- -->
+![](Plots/unnamed-chunk-22-1.png)<!-- -->
 In this chunk a Lasso Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
@@ -943,7 +943,7 @@ ggplot(cv.ob_df, mapping = aes(x = size, y = deviance)) +
   geom_vline(xintercept = best_size, col = "firebrick1")
 ```
 
-![](Plots And Images/unnamed-chunk-25-1.png)<!-- -->
+![](Plots/unnamed-chunk-25-1.png)<!-- -->
 This code chunk builds a decision tree model on the rounded full dataset
 using the selected features. It performs cross-validation on the
 decision tree model to determine the optimal size (number of terminal
@@ -960,7 +960,7 @@ plot(ob.tree.final)
 text(ob.tree.final, cex=0.7 ,adj=1)
 ```
 
-![](Plots And Images/unnamed-chunk-26-1.png)<!-- -->
+![](Plots/unnamed-chunk-26-1.png)<!-- -->
 
 ``` r
 # Compute training and test errors for Full Data
@@ -1079,7 +1079,7 @@ ggplot(cv.ob_subdf, mapping = aes(x = size, y = deviance)) +
   geom_vline(xintercept = best_size_sub, col = "darkturquoise")
 ```
 
-![](Plots And Images/unnamed-chunk-28-1.png)<!-- -->
+![](Plots/unnamed-chunk-28-1.png)<!-- -->
 This code chunk builds a decision tree model on the rounded subset
 dataset using the selected features. It performs cross-validation on the
 decision tree model to determine the optimal size (number of terminal
@@ -1097,7 +1097,7 @@ plot(ob.subtree.final)
 text(ob.subtree.final, cex=.7 ,adj=1)
 ```
 
-![](Plots And Images/unnamed-chunk-29-1.png)<!-- -->
+![](Plots/unnamed-chunk-29-1.png)<!-- -->
 
 ``` r
 # Compute training and test errors for Rounded Subset Data
@@ -1219,7 +1219,7 @@ ggplot(cv.ob.rem_df, mapping = aes(x = size, y = deviance)) +
   geom_vline(xintercept = best_size_rem, col = "forestgreen")
 ```
 
-![](Plots And Images/unnamed-chunk-31-1.png)<!-- -->
+![](Plots/unnamed-chunk-31-1.png)<!-- -->
 This code chunk builds a decision tree model on the rounded subset
 dataset using the selected features. It performs cross-validation on the
 decision tree model to determine the optimal size (number of terminal
@@ -1236,7 +1236,7 @@ plot(ob.remtree.final)
 text(ob.remtree.final, cex=.7 ,adj=1)
 ```
 
-![](Plots And Images/unnamed-chunk-32-1.png)<!-- -->
+![](Plots/unnamed-chunk-32-1.png)<!-- -->
 
 ``` r
 # Compute training and test errors for Removed Data
@@ -1427,7 +1427,7 @@ ggroc(c(rocobjs_logit, rocobjs_tree), alpha = 0.5) +
   labs(title = "ROC Curves for Logistic Regression and Decision Tree Models")
 ```
 
-![](Plots And Images/unnamed-chunk-35-1.png)<!-- -->
+![](Plots/unnamed-chunk-35-1.png)<!-- -->
 For Model Evaluation , fitting a logistic regression and decision tree
 models for all three datasets (rounded full data, rounded subset, and
 removed data) using the selected features. It then computes the receiver
